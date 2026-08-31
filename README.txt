@@ -41,3 +41,5 @@ Added a table-of-contents sidebar to resources.html (it has 12 sections and was 
 Updated credits.html credit-tracker guidance to explain green, yellow, and red tracker colors for completed, enrolled/unfinished, and still-needed graduation credits.
 
 Updated credits.html graduation requirements guidance and credit-path next steps.
+
+Updated credits.html quick-action cards so each one links to its matching section on the same page.
