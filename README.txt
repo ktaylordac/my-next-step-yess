@@ -5,7 +5,7 @@ MY NEXT STEP – YESS — FINAL WORKING MASTER
 Integrated:
 - Kristen, YESS School Counselor
 - ktdacquisto@graniteschools.org
-- 365-646-1790
+- 385-646-1790
 - Monday–Friday, 8:00 AM–3:00 PM
 - Allyson, YESS Registrar
 - alesuma@graniteschools.org
@@ -27,3 +27,5 @@ Added: YESS DSI/Gemstone, YESS Decker Lake and SLVDC, Westbrook Transition class
 Added: Job Corps information and current Utah center search; DCFS/foster-care education, employment, TAL, ETV, scholarship, housing/transportation, and Youth-in-Care resources.
 
 Statewide resource audit additions: Utah Dropout Prevention/Recovery, CTE, WIOA Youth, Vocational Rehabilitation, USHE colleges/technical colleges, Utah scholarships/aid, Admit Utah, 211 Utah, McKinney-Vento, Youth-in-Care, disability transition, and education-rights/dispute resources.
+
+Added AGENTS.md for AI coding agents. Fixed counselor phone number typo (was 365-646-1790 on some pages, correct number is 385-646-1790, now consistent everywhere). Updated all 10 remaining pages' headers to the current logo-based branding used on index.html (previously only index.html had been updated).
