@@ -39,3 +39,5 @@ Fixed expandable sections (details/summary, e.g. resources.html) having no paddi
 Added a table-of-contents sidebar to resources.html (it has 12 sections and was long enough to warrant one). Sticky sidebar alongside the content above 900px width; collapses into an "On This Page" dropdown above that, reusing nav.js's toggle pattern. Added a heading + id to every linkable section, including a new "Quick Categories" heading on the previously-unlabeled first section.
 
 Updated credits.html credit-tracker guidance to explain green, yellow, and red tracker colors for completed, enrolled/unfinished, and still-needed graduation credits.
+
+Updated credits.html graduation requirements guidance and credit-path next steps.
