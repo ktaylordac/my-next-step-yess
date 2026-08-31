@@ -84,6 +84,11 @@ dead link is a real failure for a real student, not just a bug.
   (🔢 📄 🏫 🧠 💼 etc.) — keep using them consistently with the existing icon-per-category
   pattern rather than dropping them for "cleaner" text-only content.
 
+## Shared JS
+
+- `nav.js` is a single shared script (linked from all 11 pages via `<script src="nav.js" defer></script>`) that drives the mobile hamburger menu: it toggles `.open` on `#primary-nav` when `.nav-toggle` is clicked, and closes the menu on link click. If you touch the header, keep the `.nav-toggle` button, `id="primary-nav"` on `<nav class="navlinks">`, and the `nav.js` script tag in sync across all pages — the mobile nav silently breaks if any one of the three is missing.
+- Below the 950px breakpoint the desktop nav row is replaced by this toggle; there is no other way to reach the nav links on a narrow screen except the footer, so don't remove the toggle without replacing it with something equivalent.
+
 ## Style conventions
 
 - All shared visual styling lives in `style.css` using CSS custom properties defined in
@@ -96,6 +101,11 @@ dead link is a real failure for a real student, not just a bug.
   good chance the layout you need already exists.
 - Responsive breakpoints are already defined at 950px and 620px in `style.css`; extend
   those media query blocks rather than adding new breakpoints.
+
+## Head tags
+
+- Every page has a `favicon.png`, a `meta description`, and Open Graph tags (`og:title`, `og:description`, `og:url`, `og:image`, `og:site_name`) in `<head>`, all pointing at `https://ktaylordac.github.io/my-next-step-yess/` (the GitHub Pages URL implied by the `origin` remote — update this base if the site ever moves to a custom domain or different repo). When adding a new page, copy this block from an existing page and update the per-page `title`, `description`, `og:title`, and `og:url`.
+- External links (`target="_blank"`) must include `rel="noopener"` to prevent the opened page from accessing `window.opener`. Keep this on any new external link.
 
 ## Before finishing any change
 

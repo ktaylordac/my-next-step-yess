@@ -29,3 +29,5 @@ Added: Job Corps information and current Utah center search; DCFS/foster-care ed
 Statewide resource audit additions: Utah Dropout Prevention/Recovery, CTE, WIOA Youth, Vocational Rehabilitation, USHE colleges/technical colleges, Utah scholarships/aid, Admit Utah, 211 Utah, McKinney-Vento, Youth-in-Care, disability transition, and education-rights/dispute resources.
 
 Added AGENTS.md for AI coding agents. Fixed counselor phone number typo (was 365-646-1790 on some pages, correct number is 385-646-1790, now consistent everywhere). Updated all 10 remaining pages' headers to the current logo-based branding used on index.html (previously only index.html had been updated).
+
+Code quality pass: added a mobile hamburger menu (nav.js + style.css) since the nav bar previously disappeared with no replacement below 950px width; added rel="noopener" to all 46 external target="_blank" links; added favicon.png, meta descriptions, and Open Graph tags to all 11 pages; fixed the resource card QR image having no max-width (could overflow its card) and shrank the file from 1.1MB to ~420KB.

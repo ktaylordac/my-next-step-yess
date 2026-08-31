@@ -14,6 +14,12 @@ header{background:#ffffff;color:var(--navy);box-shadow:0 2px 12px rgba(9,39,67,.
 .navlinks a.active,.navlinks a[aria-current="page"]{background:var(--blue);color:#fff;font-weight:900;box-shadow:0 3px 8px rgba(23,105,209,.20)}
 .navlinks a.help-btn{border:1.5px solid var(--blue);background:#fff !important;color:var(--blue) !important;font-weight:900 !important;margin-left:8px;padding:9px 15px}
 .navlinks a.help-btn:hover{background:#eef5ff !important}
+.nav-toggle{display:none;align-items:center;justify-content:center;background:#fff;border:1.5px solid var(--blue);color:var(--blue);font-size:1.2rem;line-height:1;padding:8px 12px;border-radius:8px;cursor:pointer}
+.nav-toggle:hover{background:#eef5ff}
+
+/* Images should never overflow their container */
+img{max-width:100%;height:auto}
+.resource-qr-code{display:block;width:100%;max-width:340px;margin:0 auto}
 
 /* TEXT BLOCK PADDING — ensure readable spacing for text inside common content containers */
 .card, .callout, .page-hero, .hero-panel, .resource-card-body, .stat-card, .path-card, .section-title, .contact-grid .card, .quote-list p {
@@ -31,7 +37,7 @@ header{background:#ffffff;color:var(--navy);box-shadow:0 2px 12px rgba(9,39,67,.
 
 /* Footer */
 footer{background:var(--navy);color:#fff;padding:35px 24px;margin-top:20px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-links{display:flex;flex-wrap:wrap;gap:14px}.footer-links a{color:#d9ebff;text-decoration:none;font-size:.88rem}.small{font-size:.85rem;color:var(--muted)}
-@media(max-width:950px){.nav{align-items:flex-start}.navlinks{display:none}.hero{grid-template-columns:1fr}.card-grid.eight,.card-grid.four{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:950px){.nav{align-items:flex-start;flex-wrap:wrap}.nav-toggle{display:inline-flex}.navlinks{display:none;width:100%;flex-direction:column;align-items:stretch;gap:4px;margin-top:12px}.navlinks.open{display:flex}.navlinks a.help-btn{margin-left:0;margin-top:6px}.hero{grid-template-columns:1fr}.card-grid.eight,.card-grid.four{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.hero{padding:38px 18px}.hero-panel{padding:16px}section{padding:40px 18px}.choice-grid,.card-grid.two,.card-grid.three,.card-grid.four,.card-grid.eight,.steps,.contact-grid,.quote-list{grid-template-columns:1fr}.page-hero{padding:40px 18px}h2{font-size:1.65rem}.nav{padding:10px 14px}.brand{font-size:1rem}}
 
 /* ---------- HEADER / BRAND ---------- */
