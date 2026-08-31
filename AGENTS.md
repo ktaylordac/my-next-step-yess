@@ -89,6 +89,32 @@ dead link is a real failure for a real student, not just a bug.
 - `nav.js` is a single shared script (linked from all 11 pages via `<script src="nav.js" defer></script>`) that drives the mobile hamburger menu: it toggles `.open` on `#primary-nav` when `.nav-toggle` is clicked, and closes the menu on link click. If you touch the header, keep the `.nav-toggle` button, `id="primary-nav"` on `<nav class="navlinks">`, and the `nav.js` script tag in sync across all pages — the mobile nav silently breaks if any one of the three is missing.
 - Below the 950px breakpoint the desktop nav row is replaced by this toggle; there is no other way to reach the nav links on a narrow screen except the footer, so don't remove the toggle without replacing it with something equivalent.
 
+## Do not silently truncate style.css
+
+`style.css` has been badly regressed twice by agents doing a full-file rewrite instead of
+a targeted edit: once by rewriting the file to a "cleaned up" version that quietly dropped
+several component styles (`.stat-card`, `.path-card`, `.flow`, `.quote-list`,
+`.contact-grid`, `.checklist`, the `details`/`summary` accordion), and again shortly after
+by a rewrite that additionally dropped `.card`/`.link-card` box styling and the base
+`section` container's `padding`/`max-width` — while leaving comments in the file claiming
+"rest of stylesheet unchanged" that were not true. The visible symptom both times was
+generic (cards losing their border/shadow, or text running edge-to-edge) and only surfaced
+when someone eventually eyeballed the live site — nothing catches this automatically since
+there's no visual regression test.
+
+If you need to change `style.css`:
+- Prefer a targeted `Edit`/patch over rewriting the whole file.
+- If you do rewrite the whole file, diff the new version's selector list against the old
+  one first (e.g. `grep -o '\.[a-zA-Z-]*{' style.css | sort -u`) and account for every
+  selector that disappears — don't write a comment claiming content is unchanged unless
+  you've actually verified it byte-for-byte.
+- After any style.css change, open a page from each of these families in a browser and
+  confirm the box/shadow/spacing still looks right, not just that the page loads:
+  a plain `.card` page (`adult-education.html`), `.link-card` (`index.html`),
+  `.stat-card`/`.path-card` (`credits.html`/`future.html`), `.flow`/`.quote-list`
+  (`records.html`), the `details`/`summary` accordion (`resources.html`), and the
+  `.resource-card` grid (`index.html`).
+
 ## Style conventions
 
 - All shared visual styling lives in `style.css` using CSS custom properties defined in
