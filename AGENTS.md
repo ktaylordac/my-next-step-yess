@@ -1,0 +1,164 @@
+# AGENTS.md
+
+Guidance for any AI coding agent (Claude Code, Codex, Kiro, Cursor, etc.) working in this repo.
+This site is maintained almost entirely by AI agents — there is no build process and no
+human review step by default, so correctness and consistency checks that a team would
+normally catch in code review need to happen here instead.
+
+## What this is
+
+"My Next Step – YESS" is an 11-page static HTML student resource portal for YESS
+(Youth Educational Support School), a Granite School District program. It helps students
+in transition (changing schools, waiting for placement, behind on credits, etc.) find
+next steps, contacts, and resources. See `README.txt` for the running changelog of what's
+been added.
+
+The audience is students who may be in crisis or unstable situations. Accuracy of contact
+info, phone numbers, form links, and resource details is not cosmetic — a wrong number or
+dead link is a real failure for a real student, not just a bug.
+
+## Stack and build
+
+- Plain HTML + one shared `style.css`. No framework, no bundler, no package.json, no build step.
+- Hosted on GitHub Pages directly from this repo (no `.github/workflows`, no `CNAME`, no
+  `.nojekyll` — just static files served as-is). Pushing to the default branch is the deploy.
+- "Preview" = open the `.html` file directly in a browser. There is no dev server.
+- No test suite. Verification is manual: open the page, check links, check the console.
+
+## Shared structure — every page follows this shape
+
+```html
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page Name | My Next Step – YESS</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header>...nav, see below...</header>
+<main>
+  <div class="page-hero">...</div>   <!-- inner pages -->
+  <section>...</section>
+  ...
+</main>
+<footer>...footer, see below...</footer>
+</body></html>
+```
+
+- `index.html` is the only page written pretty-printed/multi-line; every other page is
+  written as dense single-line HTML. Match whichever style the file you're editing already
+  uses — don't reformat a whole file as a drive-by change.
+- There is no templating and no includes. The header and footer are copy-pasted into all
+  11 files. **If you change the header or footer, you must update it in all 11 `.html`
+  files, not just the one you're working on.** This has drifted before (see below) —
+  after any header/footer/nav change, run something like:
+  `grep -c "brand-logo" *.html` or diff the header block across files to confirm all
+  pages still match before finishing.
+- Canonical header markup (logo + nav) lives in `index.html` — treat it as the reference
+  implementation. Every page's nav must:
+  - List all 10 top-level pages in the same order.
+  - Mark the current page's link `class="active" aria-current="page"`.
+  - Keep the last nav item as the `help-btn`-styled link to `help.html`
+    (on `help.html` itself, that link is `class="active help-btn" aria-current="page"`).
+- Footer nav links are plain (no active-state styling) and identical across all pages.
+
+## Content and data conventions
+
+- Contact info (counselor, registrar, phone numbers, emails, form URLs) appears in
+  multiple pages redundantly (`index.html`, `help.html`, `records.html`, `README.txt`).
+  There is no single source of truth — when you update a phone number, email, or form
+  link, grep for the old value across `*.html` and `README.txt` and update every hit.
+  This has been a real source of bugs (a digit-swapped phone number was live on one page
+  while three other places had the correct one).
+- Google Form links (credit tracker request, YouScience info request) are placeholders
+  the counselor manages — don't regenerate or guess new ones; only change them if
+  explicitly given a new URL.
+- `resources.html` contains bracketed placeholder text like `[Add local youth housing
+  resources]` — these are intentionally unfilled sections waiting for real local resource
+  info, not broken content to "fix" by inventing plausible-sounding resources. Only replace
+  a placeholder with real, verifiable information (a real org, address, phone number, or
+  link), and prefer Utah/Granite-district-specific sources given the audience.
+- Keep the reading level and tone of copy consistent with existing pages: short sentences,
+  second person ("you"), encouraging and non-judgmental, plain language (this is written
+  for teenagers, some in crisis). Don't upgrade copy to sound more formal/corporate.
+- Emoji are used deliberately as visual icons throughout nav items, cards, and headings
+  (🔢 📄 🏫 🧠 💼 etc.) — keep using them consistently with the existing icon-per-category
+  pattern rather than dropping them for "cleaner" text-only content.
+
+## Shared JS
+
+- `nav.js` is a single shared script (linked from all 11 pages via `<script src="nav.js" defer></script>`) that drives the hamburger menu: it toggles `.open` on `#primary-nav` when `.nav-toggle` is clicked, and closes the menu on link click. If you touch the header, keep the `.nav-toggle` button, `id="primary-nav"` on `<nav class="navlinks">`, and the `nav.js` script tag in sync across all pages — the nav silently breaks if any one of the three is missing.
+- Below the 1600px breakpoint the desktop nav row is replaced by this toggle; there is no other way to reach the nav links at those widths except the footer, so don't remove the toggle without replacing it with something equivalent. The breakpoint is set that high (not the usual ~950px "mobile" cutoff) because there are 10 nav links plus a CTA button — that doesn't fit on one line at typical laptop widths (~1280–1440px) without individual labels wrapping unevenly onto two lines. If you add or remove nav links, or change `.nav`'s `max-width` (currently 1600px, matching the breakpoint), re-check with a browser at a few widths just above and below the breakpoint that no label wraps and the open dropdown still renders as a clean full-width block below the header (not squeezed into the same row as the brand — see the `@media(max-width:1600px)` block, which sets `.nav{flex-wrap:wrap}` for exactly this reason).
+
+## Do not silently truncate style.css
+
+`style.css` has been badly regressed twice by agents doing a full-file rewrite instead of
+a targeted edit: once by rewriting the file to a "cleaned up" version that quietly dropped
+several component styles (`.stat-card`, `.path-card`, `.flow`, `.quote-list`,
+`.contact-grid`, `.checklist`, the `details`/`summary` accordion), and again shortly after
+by a rewrite that additionally dropped `.card`/`.link-card` box styling and the base
+`section` container's `padding`/`max-width` — while leaving comments in the file claiming
+"rest of stylesheet unchanged" that were not true. The visible symptom both times was
+generic (cards losing their border/shadow, or text running edge-to-edge) and only surfaced
+when someone eventually eyeballed the live site — nothing catches this automatically since
+there's no visual regression test.
+
+If you need to change `style.css`:
+- Prefer a targeted `Edit`/patch over rewriting the whole file.
+- If you do rewrite the whole file, diff the new version's selector list against the old
+  one first (e.g. `grep -o '\.[a-zA-Z-]*{' style.css | sort -u`) and account for every
+  selector that disappears — don't write a comment claiming content is unchanged unless
+  you've actually verified it byte-for-byte.
+- After any style.css change, open a page from each of these families in a browser and
+  confirm the box/shadow/spacing still looks right, not just that the page loads:
+  a plain `.card` page (`adult-education.html`), `.link-card` (`index.html`),
+  `.stat-card`/`.path-card` (`credits.html`/`future.html`), `.flow`/`.quote-list`
+  (`records.html`), the `details`/`summary` accordion (`resources.html`), and the
+  `.resource-card` grid (`index.html`).
+
+## Style conventions
+
+- All shared visual styling lives in `style.css` using CSS custom properties defined in
+  `:root` (`--navy`, `--blue`, `--teal`, `--gold`, `--orange`, `--ink`, `--muted`, `--bg`).
+  Use these variables instead of introducing new hard-coded colors.
+- Reuse existing utility classes before adding new ones: `.card`, `.card-grid` (with
+  `two`/`three`/`four`/`eight` modifiers), `.btn` (with `primary`/`secondary`), `.callout`,
+  `.page-hero`, `.hero-panel`, `.stat-card`, `.path-card`, `.contact-grid`, `.checklist`,
+  `.quote-list`, `.steps`, `.flow`. Check `style.css` before writing new CSS — there's a
+  good chance the layout you need already exists.
+- Responsive breakpoints are already defined at 1600px (nav hamburger cutoff), 1100px,
+  950px, and 620px in `style.css`; extend those media query blocks rather than adding
+  new breakpoints.
+
+## Page-specific table of contents (resources.html only)
+
+`resources.html` is long (12+ sections) and has its own sticky/collapsible table of
+contents, scoped to that page only — the other 10 pages are short enough not to need one.
+- Structure: `.resources-layout` (flex row ≥901px, block below that) contains `nav.toc`
+  followed by `.resources-body`, which wraps every `<section>` that follows the page-hero.
+  Each linkable section has an `id` its TOC entry links to with `#id`.
+- The TOC's expand/collapse is a `<button class="toc-toggle">` + `<ul class="toc-list"
+  id="toc-list">`, toggled by the same `setupToggle()` helper in `nav.js` used for the
+  header's hamburger menu — **not** a native `<details>` element. This was deliberate:
+  native `<details>` content cannot be forced visible while closed via CSS (not even
+  `display:block!important` on the children works — browsers don't render it at all, this
+  isn't a specificity problem you can just win), so it can't power "collapsed on mobile,
+  always-open sidebar on desktop" the way `display` overrides can. If you need a disclosure
+  widget whose default open/closed state should differ by breakpoint, use the
+  button+class+CSS pattern, not `<details>`.
+- If you add or remove a section, update both the section's `id`/heading and its `<li><a
+  href="#id">` entry in `.toc-list` — nothing enforces these staying in sync.
+
+## Head tags
+
+- Every page has a `favicon.png`, a `meta description`, and Open Graph tags (`og:title`, `og:description`, `og:url`, `og:image`, `og:site_name`) in `<head>`, all pointing at `https://ktaylordac.github.io/my-next-step-yess/` (the GitHub Pages URL implied by the `origin` remote — update this base if the site ever moves to a custom domain or different repo). When adding a new page, copy this block from an existing page and update the per-page `title`, `description`, `og:title`, and `og:url`.
+- External links (`target="_blank"`) must include `rel="noopener"` to prevent the opened page from accessing `window.opener`. Keep this on any new external link.
+
+## Before finishing any change
+
+1. Open the edited page(s) directly in a browser and click through the nav — confirm
+   there's no dead link and the active nav state is correct.
+2. If you touched contact info, a phone number, an email, or a form URL: grep the whole
+   repo for the old value to make sure you didn't miss another copy.
+3. If you touched the header, footer, or nav: confirm all 11 `.html` files still match.
+4. Update `README.txt`'s changelog-style list at the bottom with a one-line summary of
+   what was added/changed, consistent with its existing entries.
