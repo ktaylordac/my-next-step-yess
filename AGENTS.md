@@ -86,8 +86,8 @@ dead link is a real failure for a real student, not just a bug.
 
 ## Shared JS
 
-- `nav.js` is a single shared script (linked from all 11 pages via `<script src="nav.js" defer></script>`) that drives the mobile hamburger menu: it toggles `.open` on `#primary-nav` when `.nav-toggle` is clicked, and closes the menu on link click. If you touch the header, keep the `.nav-toggle` button, `id="primary-nav"` on `<nav class="navlinks">`, and the `nav.js` script tag in sync across all pages — the mobile nav silently breaks if any one of the three is missing.
-- Below the 950px breakpoint the desktop nav row is replaced by this toggle; there is no other way to reach the nav links on a narrow screen except the footer, so don't remove the toggle without replacing it with something equivalent.
+- `nav.js` is a single shared script (linked from all 11 pages via `<script src="nav.js" defer></script>`) that drives the hamburger menu: it toggles `.open` on `#primary-nav` when `.nav-toggle` is clicked, and closes the menu on link click. If you touch the header, keep the `.nav-toggle` button, `id="primary-nav"` on `<nav class="navlinks">`, and the `nav.js` script tag in sync across all pages — the nav silently breaks if any one of the three is missing.
+- Below the 1600px breakpoint the desktop nav row is replaced by this toggle; there is no other way to reach the nav links at those widths except the footer, so don't remove the toggle without replacing it with something equivalent. The breakpoint is set that high (not the usual ~950px "mobile" cutoff) because there are 10 nav links plus a CTA button — that doesn't fit on one line at typical laptop widths (~1280–1440px) without individual labels wrapping unevenly onto two lines. If you add or remove nav links, or change `.nav`'s `max-width` (currently 1600px, matching the breakpoint), re-check with a browser at a few widths just above and below the breakpoint that no label wraps and the open dropdown still renders as a clean full-width block below the header (not squeezed into the same row as the brand — see the `@media(max-width:1600px)` block, which sets `.nav{flex-wrap:wrap}` for exactly this reason).
 
 ## Do not silently truncate style.css
 
@@ -125,8 +125,9 @@ If you need to change `style.css`:
   `.page-hero`, `.hero-panel`, `.stat-card`, `.path-card`, `.contact-grid`, `.checklist`,
   `.quote-list`, `.steps`, `.flow`. Check `style.css` before writing new CSS — there's a
   good chance the layout you need already exists.
-- Responsive breakpoints are already defined at 950px and 620px in `style.css`; extend
-  those media query blocks rather than adding new breakpoints.
+- Responsive breakpoints are already defined at 1600px (nav hamburger cutoff), 1100px,
+  950px, and 620px in `style.css`; extend those media query blocks rather than adding
+  new breakpoints.
 
 ## Head tags
 
