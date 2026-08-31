@@ -12,7 +12,7 @@ section{max-width:1480px;margin:auto;padding:54px 24px}.section-title{text-align
 .quote-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.quote-list p{margin:0;background:#f7fbff;border:1px solid var(--line);padding:15px;border-radius:12px;font-weight:700}
 .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .checklist{padding-left:0;list-style:none}.checklist li{padding:9px 0;border-bottom:1px solid var(--line)}
-details{background:#fff;border:1px solid var(--line);border-radius:14px;margin:10px 0;box-shadow:0 3px 12px rgba(9,39,67,.04)}summary{cursor:pointer;padding:17px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"+";float:right;font-size:1.25rem}details[open] summary:after{content:"−"}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 17px;box-shadow:0 3px 12px rgba(9,39,67,.04)}details[open]{padding-bottom:17px}summary{cursor:pointer;margin:0 -17px;padding:17px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"+";float:right;font-size:1.25rem}details[open] summary:after{content:"−"}details>*:not(summary)+*{margin-top:14px}
 .card p,.card li{color:#53697b}
 
 /* ---------- HEADER / BRAND ---------- */
