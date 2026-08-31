@@ -129,6 +129,25 @@ If you need to change `style.css`:
   950px, and 620px in `style.css`; extend those media query blocks rather than adding
   new breakpoints.
 
+## Page-specific table of contents (resources.html only)
+
+`resources.html` is long (12+ sections) and has its own sticky/collapsible table of
+contents, scoped to that page only — the other 10 pages are short enough not to need one.
+- Structure: `.resources-layout` (flex row ≥901px, block below that) contains `nav.toc`
+  followed by `.resources-body`, which wraps every `<section>` that follows the page-hero.
+  Each linkable section has an `id` its TOC entry links to with `#id`.
+- The TOC's expand/collapse is a `<button class="toc-toggle">` + `<ul class="toc-list"
+  id="toc-list">`, toggled by the same `setupToggle()` helper in `nav.js` used for the
+  header's hamburger menu — **not** a native `<details>` element. This was deliberate:
+  native `<details>` content cannot be forced visible while closed via CSS (not even
+  `display:block!important` on the children works — browsers don't render it at all, this
+  isn't a specificity problem you can just win), so it can't power "collapsed on mobile,
+  always-open sidebar on desktop" the way `display` overrides can. If you need a disclosure
+  widget whose default open/closed state should differ by breakpoint, use the
+  button+class+CSS pattern, not `<details>`.
+- If you add or remove a section, update both the section's `id`/heading and its `<li><a
+  href="#id">` entry in `.toc-list` — nothing enforces these staying in sync.
+
 ## Head tags
 
 - Every page has a `favicon.png`, a `meta description`, and Open Graph tags (`og:title`, `og:description`, `og:url`, `og:image`, `og:site_name`) in `<head>`, all pointing at `https://ktaylordac.github.io/my-next-step-yess/` (the GitHub Pages URL implied by the `origin` remote — update this base if the site ever moves to a custom domain or different repo). When adding a new page, copy this block from an existing page and update the per-page `title`, `description`, `og:title`, and `og:url`.
