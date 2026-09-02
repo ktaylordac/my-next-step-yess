@@ -125,6 +125,7 @@ h1 span{color:var(--blue)}
 .callout{max-width:1480px;margin:15px auto 0;padding:25px 30px;background:#e8f3ff;border-left:none;border-radius:14px;display:flex;align-items:center;gap:20px}
 .callout h2{margin:0}
 .callout p{margin:0;flex:1}
+.youscience-account-callout{flex-direction:column;align-items:flex-start}
 
 /* ---------- FOOTER ---------- */
 
