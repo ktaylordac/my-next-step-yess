@@ -42,6 +42,8 @@ Updated credits.html credit-tracker guidance to explain green, yellow, and red t
 
 Updated credits.html graduation requirements guidance and credit-path next steps.
 
+Added YESS credit-tracker template examples and a generic Utah state graduation-requirements checklist to credits.html.
+
 Updated credits.html quick-action cards so each one links to its matching section on the same page.
 
 Updated the home-page message for YESS students returning to or continuing education, recovering credits, or planning what comes next. Renamed the Transition page and its sitewide navigation label to “Take My Next Step.”
