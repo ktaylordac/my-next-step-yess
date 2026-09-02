@@ -56,6 +56,8 @@ Updated Take My Next Step with boundary-school and Granite high-school guidance,
 
 Updated the YouScience page with original-account login steps and YouScience Support contact information for former YESS students.
 
+Updated the YouScience resume section with Resume Builder steps, the official YouScience guide, and Grammarly’s Resume Builder.
+
 Adjusted the YouScience account callout so its guidance reads left to right beneath the question instead of in side-by-side panels.
 
 Expanded My Future with Utah job-search and youth workforce help, paid-learning paths, career licenses and certifications, technical colleges, public two- and four-year college applications, private college options, and military/JROTC guidance.
