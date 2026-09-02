@@ -47,3 +47,5 @@ Updated credits.html quick-action cards so each one links to its matching sectio
 Updated the home-page message for YESS students returning to or continuing education, recovering credits, or planning what comes next. Renamed the Transition page and its sitewide navigation label to “Take My Next Step.”
 
 Added expandable Salt Lake County and statewide resource directories for housing, food, UTA transportation, jobs, IDs, health, financial help, clothing, and education/foster-care transition supports, including DWS, Vocational Rehabilitation, TAL/ETV, ETCAs, and Check & Connect.
+
+Updated the Records page with a visual Granite/non-Granite transcript-transfer diagram, follow-up and credit-review steps, and a reminder to request records from every school where credits were earned.
