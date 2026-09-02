@@ -59,3 +59,5 @@ Updated the YouScience page with original-account login steps and YouScience Sup
 Adjusted the YouScience account callout so its guidance reads left to right beneath the question instead of in side-by-side panels.
 
 Expanded My Future with Utah job-search and youth workforce help, paid-learning paths, career licenses and certifications, technical colleges, public two- and four-year college applications, private college options, and military/JROTC guidance.
+
+Added a home-page IEP option and a new Utah post-high-school guide covering district transition programs, college, technical training, employment, independent living, and adult disability services, with details for Granite GTSA and Provo East Bay Post High.
