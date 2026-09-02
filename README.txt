@@ -55,3 +55,5 @@ Updated the Records page with a visual Granite/non-Granite transcript-transfer d
 Updated Take My Next Step with boundary-school and Granite high-school guidance, treatment record steps, Utah secure-care/ETCA direction, alternative-program examples, a Weber Basin Job Corps link, and a counselor help button.
 
 Updated the YouScience page with original-account login steps and YouScience Support contact information for former YESS students.
+
+Expanded My Future with Utah job-search and youth workforce help, paid-learning paths, career licenses and certifications, technical colleges, public two- and four-year college applications, private college options, and military/JROTC guidance.
