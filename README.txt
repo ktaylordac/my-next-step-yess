@@ -49,3 +49,5 @@ Updated the home-page message for YESS students returning to or continuing educa
 Added expandable Salt Lake County and statewide resource directories for housing, food, UTA transportation, jobs, IDs, health, financial help, clothing, and education/foster-care transition supports, including DWS, Vocational Rehabilitation, TAL/ETV, ETCAs, and Check & Connect.
 
 Updated the Records page with a visual Granite/non-Granite transcript-transfer diagram, follow-up and credit-review steps, and a reminder to request records from every school where credits were earned.
+
+Updated Take My Next Step with boundary-school and Granite high-school guidance, treatment record steps, Utah secure-care/ETCA direction, alternative-program examples, a Weber Basin Job Corps link, and a counselor help button.
