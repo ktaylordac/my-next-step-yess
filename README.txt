@@ -73,3 +73,5 @@ Added a home-page IEP option and a new Utah post-high-school guide covering dist
 Removed the home-page “Save This Resource” card and added site, email, and phone information for Kristen, Josie, and Lee to the home and Get Help pages.
 
 Renamed the home-page adult education button to “Thinking about Adult Education.”
+
+Updated the Know My Numbers page with an image preview and link for the current YESS credit tracker template, and removed the setup placeholder beside the private tracker request button.
