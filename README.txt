@@ -75,3 +75,5 @@ Removed the home-page “Save This Resource” card and added site, email, and p
 Renamed the home-page adult education button to “Thinking about Adult Education.”
 
 Updated the Know My Numbers page with an image preview and link for the current YESS credit tracker template, and removed the setup placeholder beside the private tracker request button.
+
+Updated the Records and Transcripts transfer diagram to direct students to the YESS registrar contact information below it.
