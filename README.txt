@@ -13,9 +13,15 @@ Integrated:
 - Lee, YESS Counselor at Decker Lake
 - lmarchant@graniteschools.org
 - 385-646-7135
-- Allyson, YESS Registrar
+- Allyson, SLVDC Registrar
 - alesuma@graniteschools.org
 - 385-646-2421
+- Christy, DSI/Gemstone and Decker Lake Registrar
+- cjanderson1@graniteschools.org
+- 385-646-2087
+- Westbrook Transition 1 registrar contact
+- mnwilliams@graniteschools.org
+- 385-646-2327
 - Credit Tracker form: https://forms.gle/hP7GPwFDKoMyH3q1A
 - YouScience form: https://forms.gle/7qF5J5j5Rv13oeM59
 - YESS website
@@ -75,3 +81,5 @@ Removed the home-page “Save This Resource” card and added site, email, and p
 Renamed the home-page adult education button to “Thinking about Adult Education.”
 
 Updated the Know My Numbers page with an image preview and link for the current YESS credit tracker template, and removed the setup placeholder beside the private tracker request button.
+
+Updated the Records page with official transcript contacts for SLVDC, DSI/Gemstone, Westbrook Transition 1, and Decker Lake.
