@@ -71,3 +71,5 @@ Expanded My Future with Utah job-search and youth workforce help, paid-learning 
 Added a home-page IEP option and a new Utah post-high-school guide covering district transition programs, college, technical training, employment, independent living, and adult disability services, with details for Granite GTSA and Provo East Bay Post High.
 
 Removed the home-page “Save This Resource” card and added site, email, and phone information for Kristen, Josie, and Lee to the home and Get Help pages.
+
+Renamed the home-page adult education button to “Thinking about Adult Education.”
