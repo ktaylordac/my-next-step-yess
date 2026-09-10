@@ -83,3 +83,5 @@ Renamed the home-page adult education button to “Thinking about Adult Educatio
 Updated the Know My Numbers page with an image preview and link for the current YESS credit tracker template, and removed the setup placeholder beside the private tracker request button.
 
 Updated the Records page with official transcript contacts for SLVDC, DSI/Gemstone, Westbrook Transition 1, and Decker Lake.
+
+Expanded Pay for My Future with FAFSA independent-student guidance for foster care and court wards, foster-youth scholarships and ETV/Pell Grant resources, Salt Lake-area apprenticeships, employer help, and local college financial aid offices.
