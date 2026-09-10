@@ -3,10 +3,16 @@ MY NEXT STEP – YESS — FINAL WORKING MASTER
 11-page HTML student portal with shared styling.
 
 Integrated:
-- Kristen, YESS School Counselor
+- Kristen, YESS Counselor at Salt Lake Youth Services (DT)
 - ktdacquisto@graniteschools.org
 - 385-646-1790
 - Monday–Friday, 8:00 AM–3:00 PM
+- Josie, YESS Counselor at DSI/Gemstone and Westbrook Transition 1 Classroom
+- jdoppelt@graniteschools.org
+- 385-646-0105
+- Lee, YESS Counselor at Decker Lake
+- lmarchant@graniteschools.org
+- 385-646-7135
 - Allyson, YESS Registrar
 - alesuma@graniteschools.org
 - 385-646-2421
@@ -63,3 +69,5 @@ Adjusted the YouScience account callout so its guidance reads left to right bene
 Expanded My Future with Utah job-search and youth workforce help, paid-learning paths, career licenses and certifications, technical colleges, public two- and four-year college applications, private college options, and military/JROTC guidance.
 
 Added a home-page IEP option and a new Utah post-high-school guide covering district transition programs, college, technical training, employment, independent living, and adult disability services, with details for Granite GTSA and Provo East Bay Post High.
+
+Removed the home-page “Save This Resource” card and added site, email, and phone information for Kristen, Josie, and Lee to the home and Get Help pages.
