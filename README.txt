@@ -88,3 +88,4 @@ Added Meta’s America’s Workforce Academy to the Pay for My Future page, incl
 Expanded Pay for My Future with FAFSA independent-student guidance for foster care and court wards, foster-youth scholarships and ETV/Pell Grant resources, Salt Lake-area apprenticeships, employer help, and local college financial aid offices.
 
 Removed the duplicate Pay for My Future introduction and unlinked category cards, and moved Meta’s America’s Workforce Academy below the linked category buttons.
+Fixed the bottom Resources callouts so their descriptions read left to right beneath each heading and “Ask for help” button, with both buttons linking to Get Help.
