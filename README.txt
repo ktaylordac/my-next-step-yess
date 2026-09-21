@@ -92,5 +92,6 @@ Fixed the bottom Resources callouts so their descriptions read left to right ben
 
 
 Audited every site link, confirmed all local pages and section links resolve, and replaced stale or tracking-based external URLs with stable canonical destinations.
+Replaced the broken WIOA Youth page links with the Utah Department of Workforce Services location finder so students can ask a local office about WIOA support.
 
 Replaced broken Today’s Military links on My Future with official USA.gov and Department of Defense resources for service branches, eligibility, recruiters, and JROTC.
