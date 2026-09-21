@@ -92,3 +92,4 @@ Fixed the bottom Resources callouts so their descriptions read left to right ben
 
 
 Audited every site link, confirmed all local pages and section links resolve, and replaced stale or tracking-based external URLs with stable canonical destinations.
+Confirmed the cosmetology and barbering resource uses DOPL's current website instead of the retired commerce.utah.gov address.
