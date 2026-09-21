@@ -92,3 +92,5 @@ Fixed the bottom Resources callouts so their descriptions read left to right ben
 
 
 Audited every site link, confirmed all local pages and section links resolve, and replaced stale or tracking-based external URLs with stable canonical destinations.
+
+Replaced broken Today’s Military links on My Future with official USA.gov and Department of Defense resources for service branches, eligibility, recruiters, and JROTC.
