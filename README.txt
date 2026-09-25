@@ -96,3 +96,5 @@ Confirmed the cosmetology and barbering resource uses DOPL's current website ins
 Replaced the broken WIOA Youth page links with the Utah Department of Workforce Services location finder so students can ask a local office about WIOA support.
 
 Replaced broken Today’s Military links on My Future with official USA.gov and Department of Defense resources for service branches, eligibility, recruiters, and JROTC.
+
+Replaced the retired Granite School District PDC listing with Granite Education Foundation information for student and family basic-needs help, school support, donations, and volunteering.
