@@ -90,6 +90,8 @@ Expanded Pay for My Future with FAFSA independent-student guidance for foster ca
 Removed the duplicate Pay for My Future introduction and unlinked category cards, and moved Meta’s America’s Workforce Academy below the linked category buttons.
 Fixed the bottom Resources callouts so their descriptions read left to right beneath each heading and “Ask for help” button, with both buttons linking to Get Help.
 
+Corrected the Utah 24-credit graduation checklist to include Financial Literacy and 5.5 elective credits, and added Granite School District's full 27-credit diploma checklist to credits.html.
+
 
 Audited every site link, confirmed all local pages and section links resolve, and replaced stale or tracking-based external URLs with stable canonical destinations.
 Confirmed the cosmetology and barbering resource uses DOPL's current website instead of the retired commerce.utah.gov address.
