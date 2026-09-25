@@ -92,6 +92,8 @@ Fixed the bottom Resources callouts so their descriptions read left to right ben
 
 Corrected the Utah 24-credit graduation checklist to include Financial Literacy and 5.5 elective credits, and added Granite School District's full 27-credit diploma checklist to credits.html.
 
+Added a YouTube production package with a timed website tour, education-focused narration, upload-ready captions, recording guidance, and YouTube title, description, chapters, tags, and thumbnail direction.
+
 
 Audited every site link, confirmed all local pages and section links resolve, and replaced stale or tracking-based external URLs with stable canonical destinations.
 Confirmed the cosmetology and barbering resource uses DOPL's current website instead of the retired commerce.utah.gov address.
