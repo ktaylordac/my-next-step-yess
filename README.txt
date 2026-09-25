@@ -100,3 +100,5 @@ Replaced the broken WIOA Youth page links with the Utah Department of Workforce 
 Replaced broken Today’s Military links on My Future with official USA.gov and Department of Defense resources for service branches, eligibility, recruiters, and JROTC.
 
 Replaced the retired Granite School District PDC listing with Granite Education Foundation information for student and family basic-needs help, school support, donations, and volunteering.
+
+Removed the outdated correction note from the Utah 24-credit diploma requirements card.
