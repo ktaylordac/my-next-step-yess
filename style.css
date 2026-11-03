@@ -52,6 +52,10 @@ h1 span{color:var(--blue)}
 .primary{background:var(--blue);color:#fff;border-color:var(--blue)}
 .secondary{background:#fff;color:var(--blue);border:1.5px solid var(--blue)}
 
+/* ---------- HOME PAGE SEARCH ---------- */
+
+.site-search{padding-top:40px;padding-bottom:20px}.site-search .section-title{margin-bottom:18px}.search-form{max-width:850px}.search-form label{display:block;color:var(--navy);font-weight:800;margin-bottom:7px}.search-input-row{display:flex;gap:10px}.search-input-row input{min-width:0;flex:1;border:2px solid var(--line);border-radius:11px;padding:12px 14px;color:var(--ink);background:var(--white);font:inherit;font-size:1rem}.search-input-row input:focus{border-color:var(--blue);outline:3px solid rgba(23,105,209,.18);outline-offset:1px}.search-form .small{margin:8px 0 0}.search-status{max-width:850px;margin:18px 0 10px;font-weight:800;color:var(--navy)}.search-status:empty,.search-results:empty{display:none}.search-results{max-width:850px;display:grid;gap:10px}.search-result{display:block;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:15px 17px;color:var(--ink);text-decoration:none;box-shadow:0 3px 12px rgba(9,39,67,.04)}.search-result:hover,.search-result:focus{border-color:var(--blue);transform:translateY(-1px)}.search-result b,.search-result span{display:block}.search-result b{color:var(--blue)}.search-result span{color:var(--muted);font-size:.9rem;font-weight:400;margin-top:3px}
+
 /* ---------- RIGHT-SIDE CHOICES ---------- */
 
 .hero-panel{background:rgba(255,255,255,.65);border:none;box-shadow:none;padding:18px}
@@ -188,4 +192,5 @@ footer{background:var(--navy);color:#fff;padding:35px 24px;margin-top:20px}
   .resource-cards-grid{grid-template-columns:1fr}
   .callout{flex-direction:column;align-items:flex-start}
   .resources-callout .callout-heading{width:100%;flex-direction:column;align-items:flex-start}
+  .search-input-row{align-items:stretch;flex-direction:column}
 }

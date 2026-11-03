@@ -106,3 +106,5 @@ Replaced the retired Granite School District PDC listing with Granite Education 
 Removed the outdated correction note from the Utah 24-credit diploma requirements card.
 
 Replaced the inactive USA.gov “Compare branches” link on My Future with the Department of Defense’s Our Forces page.
+
+Added an accessible home-page search that helps students find pages by topic, including credits, records, careers, housing, and support.
